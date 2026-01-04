@@ -1,0 +1,107 @@
+<!--Note: Main Listing Area -->
+<div class="flex-1 flex flex-col gap-6">
+  <!--Note: Mobile Filters (Chips) -->
+  <div>
+    <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white pl-4 pr-4 transition-colors"
+        data-category="all"
+      >
+        <p class="text-sm font-bold">All</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Payments"
+      >
+        <p class="text-gray-300 text-sm font-medium">Payments</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Weather"
+      >
+        <p class="text-gray-300 text-sm font-medium">Weather</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Health"
+      >
+        <p class="text-gray-300 text-sm font-medium">Health Tips</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Media"
+      >
+        <p class="text-gray-300 text-sm font-medium">Media</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Money"
+      >
+        <p class="text-gray-300 text-sm font-medium">Money Exchange</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Jokes"
+      >
+        <p class="text-gray-300 text-sm font-medium">Jokes & Fun</p>
+      </button>
+    </div>
+  </div>
+
+  <!--Note: Header for Grid -->
+  <div class="flex items-center justify-between">
+    <h2 class="text-white text-[22px] font-bold leading-tight">
+      0 APIs Available
+    </h2>
+    <div class="flex items-center gap-2">
+      <span class="text-gray-400 text-sm">Sort by:</span>
+      <select
+        class="bg-transparent text-white text-sm font-medium border-none focus:ring-0 cursor-pointer pr-8 pl-0"
+      >
+        <option>Most Popular</option>
+        <option>Newest</option>
+        <option>Alphabetical</option>
+      </select>
+    </div>
+  </div>
+
+  <!--Note: API Card Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+    <!-- API cards will be dynamically inserted here by JavaScript -->
+  </div>
+
+  <!--Note: Pagination -->
+  <div class="flex justify-center mt-10">
+    <div class="flex gap-2">
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+        disabled
+      >
+        <span class="material-symbols-outlined text-lg">chevron_left</span>
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/50 bg-primary/10 text-primary"
+      >
+        1
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+      >
+        2
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+      >
+        3
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+      >
+        <span class="material-symbols-outlined text-lg">chevron_right</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Load the API cards script as a module -->
+  <script type="module" src="/src/js/api-cards.js"></script>
+</div>
