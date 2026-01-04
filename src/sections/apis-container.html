@@ -1,399 +1,101 @@
-
-
-  <!-- Main Listing Area -->
-  <div class="flex-1 flex flex-col gap-6">
-    <!-- Mobile Filters (Chips) -->
-    <div class="lg:hidden">
-      <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-        <button
-          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white pl-4 pr-4 transition-colors"
-        >
-          <p class="text-sm font-bold">All</p>
-        </button>
-        <button
-          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
-        >
-          <p class="text-gray-300 text-sm font-medium">Payments</p>
-        </button>
-        <button
-          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
-        >
-          <p class="text-gray-300 text-sm font-medium">Authentication</p>
-        </button>
-        <button
-          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
-        >
-          <p class="text-gray-300 text-sm font-medium">AI &amp; ML</p>
-        </button>
-        <button
-          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
-        >
-          <p class="text-gray-300 text-sm font-medium">Data</p>
-        </button>
-      </div>
-    </div>
-    <!-- Header for Grid -->
-    <div class="flex items-center justify-between">
-      <h2 class="text-white text-[22px] font-bold leading-tight">
-        124 APIs Available
-      </h2>
-      <div class="flex items-center gap-2">
-        <span class="text-gray-400 text-sm">Sort by:</span>
-        <select
-          class="bg-transparent text-white text-sm font-medium border-none focus:ring-0 cursor-pointer pr-8 pl-0"
-        >
-          <option>Most Popular</option>
-          <option>Newest</option>
-          <option>Alphabetical</option>
-        </select>
-      </div>
-    </div>
-    <!-- API Card Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-      <!-- Card 1 -->
-      <div
-        class="group bg-card-dark rounded-xl p-5 flex flex-col gap-4 border border-[#293038] hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer relative overflow-hidden"
+<!--Note: Main Listing Area -->
+<div class="flex-1 flex flex-col gap-6">
+  <!--Note: Mobile Filters (Chips) -->
+  <div>
+    <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white pl-4 pr-4 transition-colors"
+        data-category="all"
       >
-        <div class="flex justify-between items-start">
-          <div class="flex gap-3 items-center">
-            <div
-              class="size-10 rounded-lg bg-[#293038] text-primary flex items-center justify-center border border-[#3e4856]"
-            >
-              <span class="material-symbols-outlined">payments</span>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors"
-              >
-                Payment Gateway
-              </h3>
-              <span
-                class="text-xs text-green-400 font-mono bg-green-500/10 px-1.5 py-0.5 rounded w-fit mt-0.5"
-                >v3.1.0 (Stable)</span
-              >
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
-          Securely process credit cards, manage recurring billing, and handle
-          international payouts with a single unified integration point.
-        </p>
-        <div
-          class="flex items-center gap-3 text-xs text-gray-500 font-mono border-t border-[#293038] pt-3 mt-auto"
-        >
-          <div class="flex items-center gap-1">
-            <span class="size-2 rounded-full bg-green-500"></span>
-            <span>99.99% Uptime</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">speed</span>
-            <span>~45ms</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mt-2">
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >Finance</span
-          >
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >REST</span
-          >
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div
-        class="group bg-card-dark rounded-xl p-5 flex flex-col gap-4 border border-[#293038] hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer relative overflow-hidden"
+        <p class="text-sm font-bold">All</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Payments"
       >
-        <div class="flex justify-between items-start">
-          <div class="flex gap-3 items-center">
-            <div
-              class="size-10 rounded-lg bg-[#293038] text-primary flex items-center justify-center border border-[#3e4856]"
-            >
-              <span class="material-symbols-outlined">lock</span>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors"
-              >
-                Auth Service
-              </h3>
-              <span
-                class="text-xs text-green-400 font-mono bg-green-500/10 px-1.5 py-0.5 rounded w-fit mt-0.5"
-                >v2.0.4 (Stable)</span
-              >
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
-          Complete identity management solution supporting OAuth2, OIDC, and
-          SAML with built-in multi-factor authentication flows.
-        </p>
-        <div
-          class="flex items-center gap-3 text-xs text-gray-500 font-mono border-t border-[#293038] pt-3 mt-auto"
-        >
-          <div class="flex items-center gap-1">
-            <span class="size-2 rounded-full bg-green-500"></span>
-            <span>99.95% Uptime</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">speed</span>
-            <span>~12ms</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mt-2">
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >Security</span
-          >
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >OAuth</span
-          >
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div
-        class="group bg-card-dark rounded-xl p-5 flex flex-col gap-4 border border-[#293038] hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer relative overflow-hidden"
+        <p class="text-gray-300 text-sm font-medium">Payments</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Weather"
       >
-        <div class="flex justify-between items-start">
-          <div class="flex gap-3 items-center">
-            <div
-              class="size-10 rounded-lg bg-[#293038] text-primary flex items-center justify-center border border-[#3e4856]"
-            >
-              <span class="material-symbols-outlined">analytics</span>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors"
-              >
-                Data Streamer
-              </h3>
-              <span
-                class="text-xs text-orange-400 font-mono bg-orange-500/10 px-1.5 py-0.5 rounded w-fit mt-0.5"
-                >v1.0 (Beta)</span
-              >
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
-          Real-time data processing pipeline for ingesting, transforming, and
-          analyzing high-volume event streams with low latency.
-        </p>
-        <div
-          class="flex items-center gap-3 text-xs text-gray-500 font-mono border-t border-[#293038] pt-3 mt-auto"
-        >
-          <div class="flex items-center gap-1">
-            <span class="size-2 rounded-full bg-yellow-500"></span>
-            <span>98.00% Uptime</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">speed</span>
-            <span>~80ms</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mt-2">
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >Big Data</span
-          >
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >WebSocket</span
-          >
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div
-        class="group bg-card-dark rounded-xl p-5 flex flex-col gap-4 border border-[#293038] hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer relative overflow-hidden"
+        <p class="text-gray-300 text-sm font-medium">Weather</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Authentication"
       >
-        <div class="flex justify-between items-start">
-          <div class="flex gap-3 items-center">
-            <div
-              class="size-10 rounded-lg bg-[#293038] text-primary flex items-center justify-center border border-[#3e4856]"
-            >
-              <span class="material-symbols-outlined">chat</span>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors"
-              >
-                Messaging API
-              </h3>
-              <span
-                class="text-xs text-green-400 font-mono bg-green-500/10 px-1.5 py-0.5 rounded w-fit mt-0.5"
-                >v4.2.0 (Stable)</span
-              >
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
-          Send SMS, Push Notifications, and Email through a unified API
-          interface. Supports template management and delivery status webhooks.
-        </p>
-        <div
-          class="flex items-center gap-3 text-xs text-gray-500 font-mono border-t border-[#293038] pt-3 mt-auto"
-        >
-          <div class="flex items-center gap-1">
-            <span class="size-2 rounded-full bg-green-500"></span>
-            <span>99.99% Uptime</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">speed</span>
-            <span>~200ms</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mt-2">
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >Communications</span
-          >
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >REST</span
-          >
-        </div>
-      </div>
-      <!-- Card 5 -->
-      <div
-        class="group bg-card-dark rounded-xl p-5 flex flex-col gap-4 border border-[#293038] hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer relative overflow-hidden"
+        <p class="text-gray-300 text-sm font-medium">Authentication</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="AI & ML"
       >
-        <div class="flex justify-between items-start">
-          <div class="flex gap-3 items-center">
-            <div
-              class="size-10 rounded-lg bg-[#293038] text-primary flex items-center justify-center border border-[#3e4856]"
-            >
-              <span class="material-symbols-outlined">smart_toy</span>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors"
-              >
-                AI Vision Kit
-              </h3>
-              <span
-                class="text-xs text-green-400 font-mono bg-green-500/10 px-1.5 py-0.5 rounded w-fit mt-0.5"
-                >v1.1.0 (Stable)</span
-              >
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
-          Perform object detection, facial recognition, and OCR extraction on
-          images and video feeds using pre-trained models.
-        </p>
-        <div
-          class="flex items-center gap-3 text-xs text-gray-500 font-mono border-t border-[#293038] pt-3 mt-auto"
-        >
-          <div class="flex items-center gap-1">
-            <span class="size-2 rounded-full bg-green-500"></span>
-            <span>99.90% Uptime</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">speed</span>
-            <span>~500ms</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mt-2">
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >AI &amp; ML</span
-          >
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >gRPC</span
-          >
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div
-        class="group bg-card-dark rounded-xl p-5 flex flex-col gap-4 border border-[#293038] hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer relative overflow-hidden"
+        <p class="text-gray-300 text-sm font-medium">AI &amp; ML</p>
+      </button>
+      <button
+        class="filter-btn flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#293038] hover:bg-[#3e4856] pl-4 pr-4 transition-colors"
+        data-category="Data"
       >
-        <div class="flex justify-between items-start">
-          <div class="flex gap-3 items-center">
-            <div
-              class="size-10 rounded-lg bg-[#293038] text-primary flex items-center justify-center border border-[#3e4856]"
-            >
-              <span class="material-symbols-outlined">public</span>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-white font-bold text-lg leading-tight group-hover:text-primary transition-colors"
-              >
-                GeoLocation Service
-              </h3>
-              <span
-                class="text-xs text-green-400 font-mono bg-green-500/10 px-1.5 py-0.5 rounded w-fit mt-0.5"
-                >v2.4.1 (Stable)</span
-              >
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
-          Convert IP addresses to coordinates, calculate routing, and manage
-          geofencing events for location-based applications.
-        </p>
-        <div
-          class="flex items-center gap-3 text-xs text-gray-500 font-mono border-t border-[#293038] pt-3 mt-auto"
-        >
-          <div class="flex items-center gap-1">
-            <span class="size-2 rounded-full bg-green-500"></span>
-            <span>99.99% Uptime</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">speed</span>
-            <span>~15ms</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mt-2">
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >Maps</span
-          >
-          <span
-            class="px-2 py-1 rounded bg-[#293038] text-gray-400 text-xs font-medium"
-            >REST</span
-          >
-        </div>
-      </div>
-    </div>
-    <!-- Pagination -->
-    <div class="flex justify-center mt-10">
-      <div class="flex gap-2">
-        <button
-          class="flex items-center justify-center size-10 rounded-lg bg-[#293038] text-gray-400 hover:text-white hover:bg-[#3e4856] transition-colors disabled:opacity-50"
-        >
-          <span class="material-symbols-outlined">chevron_left</span>
-        </button>
-        <button
-          class="flex items-center justify-center size-10 rounded-lg bg-primary text-white font-bold transition-colors"
-        >
-          1
-        </button>
-        <button
-          class="flex items-center justify-center size-10 rounded-lg bg-[#293038] text-gray-400 hover:text-white hover:bg-[#3e4856] transition-colors"
-        >
-          2
-        </button>
-        <button
-          class="flex items-center justify-center size-10 rounded-lg bg-[#293038] text-gray-400 hover:text-white hover:bg-[#3e4856] transition-colors"
-        >
-          3
-        </button>
-        <span class="flex items-center justify-center size-10 text-gray-500"
-          >...</span
-        >
-        <button
-          class="flex items-center justify-center size-10 rounded-lg bg-[#293038] text-gray-400 hover:text-white hover:bg-[#3e4856] transition-colors"
-        >
-          12
-        </button>
-        <button
-          class="flex items-center justify-center size-10 rounded-lg bg-[#293038] text-gray-400 hover:text-white hover:bg-[#3e4856] transition-colors"
-        >
-          <span class="material-symbols-outlined">chevron_right</span>
-        </button>
-      </div>
+        <p class="text-gray-300 text-sm font-medium">Data</p>
+      </button>
     </div>
   </div>
+
+  <!--Note: Header for Grid -->
+  <div class="flex items-center justify-between">
+    <h2 class="text-white text-[22px] font-bold leading-tight">
+      0 APIs Available
+    </h2>
+    <div class="flex items-center gap-2">
+      <span class="text-gray-400 text-sm">Sort by:</span>
+      <select
+        class="bg-transparent text-white text-sm font-medium border-none focus:ring-0 cursor-pointer pr-8 pl-0"
+      >
+        <option>Most Popular</option>
+        <option>Newest</option>
+        <option>Alphabetical</option>
+      </select>
+    </div>
+  </div>
+
+  <!--Note: API Card Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+    <!-- API cards will be dynamically inserted here by JavaScript -->
+  </div>
+
+  <!--Note: Pagination -->
+  <div class="flex justify-center mt-10">
+    <div class="flex gap-2">
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+        disabled
+      >
+        <span class="material-symbols-outlined text-lg">chevron_left</span>
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/50 bg-primary/10 text-primary"
+      >
+        1
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+      >
+        2
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+      >
+        3
+      </button>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#293038] bg-[#1a1f25] text-gray-400 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+      >
+        <span class="material-symbols-outlined text-lg">chevron_right</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Load the API cards script as a module -->
+  <script type="module" src="/src/js/api-cards.js"></script>
 </div>

@@ -38,24 +38,6 @@
         });
     };
 
-    const initWeather = () => {
-      // Initialize mobile menu
-      if (typeof initWeather === "function") {
-        // Small delay to ensure all elements are in the DOM
-        setTimeout(() => {
-          const cleanup = initWeather();
-          // Clean up event listeners when the page is unloaded
-          window.addEventListener("beforeunload", () => {
-            if (typeof cleanup === "function") {
-              cleanup();
-            }
-          });
-        }, 100);
-      } else {
-        console.error("initWeather function not found in weather.js");
-      }
-    };
-
     // Load all components and initialize
     document.addEventListener("DOMContentLoaded", () => {
       Promise.all([
@@ -69,24 +51,16 @@
         loadComponents("footer", "src/sections/footer.html"),
       ])
         .then(() => {
-          // Load navbar.js after all components are loaded
-          const weatherScript = document.createElement("script");
-          weatherScript.src = "src/js/weather.js";
-          weatherScript.onload = function () {
+          // Load api-cards.js after all components are loaded
+          const apiCardsScript = document.createElement("script");
+          apiCardsScript.src = "src/js/api-cards.js";
+          apiCardsScript.type = "module";
+          apiCardsScript.onload = function () {
             setTimeout(() => {
-              initWeather();
+              initApiCards();
             }, 200);
           };
-          document.head.appendChild(weatherScript);
-
-          const pokemonScript = document.createElement("script");
-          pokemonScript.src = "src/js/pokemon.js";
-          pokemonScript.onload = function () {
-            setTimeout(() => {
-              initPokemon();
-            }, 200);
-          };
-          document.head.appendChild(pokemonScript);
+          document.head.appendChild(apiCardsScript);
         })
         .catch((error) => {
           console.error("Error loading components:", error);
@@ -101,10 +75,7 @@
     <main
       class="grow w-full max-w-[1440px] mx-auto px-4 md:px-10 py-6 md:py-10"
     >
-      <div class="flex flex-col lg:flex-row gap-8">
-        <div id="desktop-sidebar-filter"></div>
-        <div id="apis-container"></div>
-      </div>
+      <div id="apis-container"></div>
     </main>
     <!--Note: Simple Footer -->
     <footer id="footer"></footer>
