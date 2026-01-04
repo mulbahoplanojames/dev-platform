@@ -43,6 +43,10 @@ function createApiCard(api) {
           )
           .join("")}
       </div>
+      <a target="_blank" href="${api.path}" class="flex items-center gap-2">
+          <p>View Details</p>
+          <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
     </div>
   `;
 }
@@ -65,7 +69,7 @@ function renderApiCards(apis) {
 function initApiCards() {
   renderApiCards(apiData);
 
-  // Add event listeners for filter buttons
+  // Event listeners for filter buttons
   const filterButtons = document.querySelectorAll(".filter-btn");
   filterButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
