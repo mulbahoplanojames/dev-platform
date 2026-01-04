@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link href="/src/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev-platform</title>
+  </head>
+  <script>
+    const loadComponents = (id, url) => {
+      return fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.innerHTML = html;
+            return new Promise((resolve) => {
+              // Small delay to ensure DOM is updated
+              setTimeout(resolve, 30);
+            });
+          }
+          return Promise.resolve();
+        });
+    };
+
+    const initWeather = () => {
+      // Initialize mobile menu
+      if (typeof initWeather === "function") {
+        // Small delay to ensure all elements are in the DOM
+        setTimeout(() => {
+          const cleanup = initWeather();
+          // Clean up event listeners when the page is unloaded
+          window.addEventListener("beforeunload", () => {
+            if (typeof cleanup === "function") {
+              cleanup();
+            }
+          });
+        }, 100);
+      } else {
+        console.error("initWeather function not found in weather.js");
+      }
+    };
+
+    // Load all components and initialize
+    document.addEventListener("DOMContentLoaded", () => {
+      Promise.all([
+        loadComponents("header", "src/sections/header.html"),
+        loadComponents("hero", "src/sections/hero.html"),
+        loadComponents("footer", "src/sections/footer.html"),
+      ])
+        .then(() => {
+          // Load navbar.js after all components are loaded
+          const weatherScript = document.createElement("script");
+          weatherScript.src = "src/js/weather.js";
+          weatherScript.onload = function () {
+            setTimeout(() => {
+              initWeather();
+            }, 200);
+          };
+          document.head.appendChild(weatherScript);
+
+          const pokemonScript = document.createElement("script");
+          pokemonScript.src = "src/js/pokemon.js";
+          pokemonScript.onload = function () {
+            setTimeout(() => {
+              initPokemon();
+            }, 200);
+          };
+          document.head.appendChild(pokemonScript);
+        })
+        .catch((error) => {
+          console.error("Error loading components:", error);
+        });
+    });
+  </script>
+  <body>
+    <div id="header"></div>
+  </body>
+</html>

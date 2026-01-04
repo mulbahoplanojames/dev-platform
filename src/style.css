@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #197fe6;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #111921;
+  --color-card-dark: #1a222d;
+  --color-card-hover: #222b36;
+
+  --border-radius-default: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-full: 9999px;
+  --font-display: [ "Space Grotesk", "sans-serif"];
+}
+
+body {
+  font-family: var(--font-display);
+}
