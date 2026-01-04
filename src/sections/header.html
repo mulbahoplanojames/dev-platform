@@ -1,5 +1,145 @@
-<header>
-  <nav>
-    <p>Header</p>
-  </nav>
-</header>
+<!-- Top Navigation Bar -->
+<div
+  class="w-full border-b border-gray-200 dark:border-[#293038] bg-white dark:bg-background-dark sticky top-0 z-50"
+>
+  <div class="max-w-[1440px] mx-auto px-4 md:px-10 py-3">
+    <header class="flex items-center justify-between whitespace-nowrap">
+      <!--Note: Left content -->
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-1 text-slate-900 dark:text-white">
+          <div class="size-8 text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-dumbbell-icon lucide-dumbbell"
+            >
+              <path
+                d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"
+              />
+              <path d="m2.5 21.5 1.4-1.4" />
+              <path d="m20.1 3.9 1.4-1.4" />
+              <path
+                d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"
+              />
+              <path d="m9.6 14.4 4.8-4.8" />
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold leading-tight tracking-tight">
+            <span class="md:block hidden">GymDevPlatform</span>
+            <span class="md:hidden block">TheGym</span>
+          </h2>
+        </div>
+        <label class="hidden md:flex flex-col min-w-40 h-10! max-w-64">
+          <div
+            class="flex w-full flex-1 items-stretch rounded-lg h-full border border-gray-200 dark:border-[#3e4856] bg-gray-50 dark:bg-[#293038] overflow-hidden group focus-within:ring-1 focus-within:ring-primary"
+          >
+            <div
+              class="text-gray-500 dark:text-[#9dabb8] flex items-center justify-center pl-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+            </div>
+            <input
+              class="flex w-full min-w-0 flex-1 resize-none overflow-hidden bg-transparent text-slate-900 dark:text-white focus:outline-0 border-none h-full placeholder:text-gray-400 dark:placeholder:text-[#9dabb8] px-3 text-sm"
+              placeholder="Search"
+              value=""
+            />
+          </div>
+        </label>
+      </div>
+
+      <!--Note: right content -->
+      <div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+        <div class="hidden md:flex items-center gap-6">
+          <a
+            class="text-slate-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors"
+            href="#"
+            >Docs</a
+          >
+          <a
+            class="text-slate-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors"
+            href="#"
+            >Dashboard</a
+          >
+          <a
+            class="text-slate-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors"
+            href="#"
+            >Support</a
+          >
+        </div>
+        <div class="flex gap-2">
+          <button
+            class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-gray-100 dark:bg-[#293038] text-slate-700 dark:text-white hover:bg-gray-200 dark:hover:bg-[#3e4856] transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-bell-ring-icon lucide-bell-ring"
+            >
+              <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+              <path d="M22 8c0-2.3-.8-4.3-2-6" />
+              <path
+                d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+              />
+              <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+            </svg>
+          </button>
+          <button
+            class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-gray-100 dark:bg-[#293038] text-slate-700 dark:text-white hover:bg-gray-200 dark:hover:bg-[#3e4856] transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-message-circle-icon lucide-message-circle"
+            >
+              <path
+                d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-primary cursor-pointer transition-all"
+          data-alt="User profile avatar showing a smiling face"
+          style="
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0QTdUcyLhhbsBz6y7PW4lUxnmv5O9_FDsno0oCa1O59MNRzxhj5Q7O2YbLo4Tmm3YRIMV3vGdqB1g4kmp6lVou-XeKW_jQ4dzQkBCGbNlkoVXAq3_xG7rqBYPumY1INac2fA1ELEKfHiKgGR89APbgJgnYQAcHDzqlSkNKr_86anT-Upr9lKpQYI6QbzGrVxQd8BaeOpE75yP0FiZdCSif6wc96FiOZP-Cj33CTl0vgKJ3EGmu5lYSceBoiC5GI-a0x08S7QPZnM');
+          "
+        ></div>
+      </div>
+    </header>
+  </div>
+</div>
