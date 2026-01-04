@@ -61,6 +61,11 @@
       Promise.all([
         loadComponents("header", "src/sections/header.html"),
         loadComponents("hero", "src/sections/hero.html"),
+        loadComponents("apis-container", "src/sections/apis-container.html"),
+        loadComponents(
+          "desktop-sidebar-filter",
+          "src/sections/desktop-sidebar-filter.html"
+        ),
         loadComponents("footer", "src/sections/footer.html"),
       ])
         .then(() => {
@@ -95,7 +100,12 @@
     <!--Note: Main Content Layout -->
     <main
       class="grow w-full max-w-[1440px] mx-auto px-4 md:px-10 py-6 md:py-10"
-    ></main>
+    >
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div id="desktop-sidebar-filter"></div>
+        <div id="apis-container"></div>
+      </div>
+    </main>
     <!--Note: Simple Footer -->
     <footer id="footer"></footer>
   </body>
